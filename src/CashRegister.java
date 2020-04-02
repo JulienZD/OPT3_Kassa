@@ -1,35 +1,35 @@
+import java.util.ArrayList;
+
 public class CashRegister {
-    /* Keep track of the total price */
-    private double total = 0.0;
-    /* Keep track of the item count */
-    public int count = 0;
+    private ArrayList<Product> products;
 
     public CashRegister() {
-
+        products = new ArrayList<>();
     }
 
     public int getCount() {
-        return count;
+        return products.size();
     }
 
-
     /* Adds a product with price */
-    public void addItem(double price) {
-        this.total = this.total+price;
-        count++;
+    public void addItem(Product product) {
+        products.add(product);
     }
 
     /* Calculates the price of an order (including discount) */
     public double computeTotal() {
-        if(this.total >= 100.0 && this.count > 3){
-            return this.total * 0.9;
+        double total = 0.0;
+        for (Product p : products) {
+            total += p.getPrice();
         }
-        return this.total;
+        if(total >= 100.0 && products.size() >= 3){
+            return total * 0.9;
+        }
+        return total;
     }
 
     /* Clears the register for the next customer */
     public void clear() {
-        this.total = 0.0;
-        this.count = 0;
+        products.clear();
     }
 }
