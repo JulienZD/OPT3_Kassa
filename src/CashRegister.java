@@ -16,12 +16,15 @@ public class CashRegister {
     /* Adds a product with price */
     public void addItem(double price) {
         this.total = this.total+price;
-
+        count++;
     }
 
     /* Calculates the price of an order (including discount) */
     public double computeTotal() {
-        return 0.0;
+        if(this.total >= 100.0 && this.count > 3){
+            return this.total * 0.9;
+        }
+        return this.total;
     }
 
     /* Clears the register for the next customer */
