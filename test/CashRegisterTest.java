@@ -9,5 +9,20 @@ TODO: Als ik daarna clear () aanroep moet computeTotal () € 0 opleveren en moe
 */
 
 
+import org.junit.Test;
+
 public class CashRegisterTest {
+
+
+    @Test
+    public void addItem() {
+    }
+
+    @Test
+    public void computeTotal() {
+    }
+
+    @Test
+    public void clear() {
+    }
 }
