@@ -7,6 +7,11 @@ public class CashRegister {
     public CashRegister() {
 
     }
+
+    public int getCount() {
+        return count;
+    }
+
     /* Adds a product with price */
     public void addItem(double price) {
 
