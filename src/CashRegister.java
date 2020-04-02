@@ -10,6 +10,7 @@ public class CashRegister {
 
     /* Adds a product with price */
     public void addItem(double price) {
+        this.total = thisd.total+price;
 
     }
 
