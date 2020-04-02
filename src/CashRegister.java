@@ -21,7 +21,7 @@ public class CashRegister {
 
     /* Clears the register for the next customer */
     public void clear() {
-        total = 0.0;
-        count = 0;
+        this.total = 0.0;
+        this.count = 0;
     }
 }
